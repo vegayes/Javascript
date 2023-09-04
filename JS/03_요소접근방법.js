@@ -69,7 +69,7 @@ function accessName(){
     }
 
     document.getElementById("name-div").innerText = str;
-    document.getElementById("name-div").innerHTML += "<br><br> 선택된 개수 : count";
+    document.getElementById("name-div").innerHTML += "<br><br> 선택된 개수 : "+count;
 }
 
 

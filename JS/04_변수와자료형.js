@@ -25,7 +25,6 @@ function test(){
     }
 
     console.log(num5);
-
 }
 
 test(); // 함수 호출

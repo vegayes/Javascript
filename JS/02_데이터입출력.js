@@ -34,7 +34,6 @@ function setInnerHTML1(){
     const test2=document.getElementById("test2")
 
     test2.innerHTML = "<b>innerHTML로 변경된</b> <br> 내용입니다."
-
 }
 
 

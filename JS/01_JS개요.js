@@ -4,7 +4,7 @@
 // js 파일은 <script> 태그 내부라고 생각하면 됨.
 
 function btnClick2(){
-    alert("external 버튼이 클리되었습니다.");
+    alert("external 버튼이 클릭되었습니다.");
 }
 
 
