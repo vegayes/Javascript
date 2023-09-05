@@ -44,7 +44,7 @@ document.getElementById("check1").addEventListener("click",function() {
 // ==================================================================
 
 
-// 메차문자 확인하기
+// 메치문자 확인하기
 document.getElementById("btn1").addEventListener("click", function() {
 
     const div1 = document.getElementById("div1");
