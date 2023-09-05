@@ -41,7 +41,7 @@ function typeTest(){
 
     const typeBox = document.getElementById("typeBox");
 
-    let temp; // 선언 후 값을 추기화 하지 않음 == undefiend
+    let temp; // 선언 후 값을 추기화 하지 않음 == undefined
     typeBox.innerHTML = "temp : " +temp;
 
     const name = "홍길동";
