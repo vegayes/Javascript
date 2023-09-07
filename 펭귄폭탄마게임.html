@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>펭귄폭탄마게임</title>
+
+        <style>
+            .area{
+                width: 400px;
+                height: 500px;
+                border: 2px solid black;
+                display: flex;
+                flex-wrap: wrap;
+                background-image: url("../images/village.png");
+            }
+
+            .penguin{
+                height: 40px;
+                width: 40px;
+                display: flex;
+                /* flex-wrap: wrap; */
+                /* position: absolute; */
+                top: 100px;
+            }
+            
+            .penguin.state-show{
+                transform: translate(10px, 0px);
+            }
+
+        </style>
+    </head>
+    <body>
+        
+        <h1>펭귄폭탄마 게임</h1>
+
+        <div class="area" id="area">
+            <img id="penguin" class="penguin" src="../images/penguin.png">
+        </div>
+
+        <script src="JS/펭귄폭탄마게임.js"></script>
+    </body>
+</html>
