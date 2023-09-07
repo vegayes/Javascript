@@ -1,25 +1,45 @@
 const penguin = document.getElementById("penguin");
 
-let positionX = 0;
-let positionY = 0;
+// let positionX = 0;
+// let positionY = 0;
 
-document.addEventListener("keydown", function(event){
+// document.addEventListener("keydown", function(event){
 
-    switch(event.key){
-    case "ArrowRight": positionX+=10; break;
-    case "ArrowLeft": positionX-=10;break;
-    case "ArrowUp": positionY-=10;break;
-    case "ArrowDown": positionY+=10;break;
+//     switch(event.key){
+//     case "ArrowRight": positionX+=10; break;
+//     case "ArrowLeft": positionX-=10;break;
+//     case "ArrowUp": positionY-=10;break;
+//     case "ArrowDown": positionY+=10;break;
+//     }
+
+//     penguin.classList.remove();
+
+//     // if (penguin.classList.contains('state-show') === true) {
+//     // penguin.classList.remove('state-show');
+//     // } else {
+//     // penguin.classList.add('state-show');
+//     // }
+// });
+
+
+
+const cssofPenguin = window.getComputedStyle(penguin);
+let leftValue = cssofPenguin.left;
+let leftValueWithoutPx = parseInt(leftValue);
+
+
+window.addEventListener("keydown", move)
+
+function move(e){
+    if(e.key == "ArrowRight" && penguin.offsetLeft > 0){
+        penguin.style.left = (penguin.offsetLeft+5)+'px';
+        penguin.style.backgroundPosition = '35px'; 
+    }else if(e.key == "ArrowLeft" && penguin.offsetLeft < 400){
+        penguin.style.left = (penguin.offsetLeft-5)+'px';
+        penguin.style.backgroundPosition = '35px'; 
     }
 
-    penguin.classList.remove();
-
-    // if (penguin.classList.contains('state-show') === true) {
-    // penguin.classList.remove('state-show');
-    // } else {
-    // penguin.classList.add('state-show');
-    // }
-});
+}
 
 
 
