@@ -103,11 +103,6 @@ function typeTest(){
     // 함수명() 괄호를 포함해서 작성하는 경우 => 함수 호출(실행)
     typeBox.innerHTML += "<br>sumFn(10,20) :" + sumFn(10,20);
 
-
-
-
-
-
 }
 
 

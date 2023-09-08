@@ -25,21 +25,49 @@ const penguin = document.getElementById("penguin");
 
 const cssofPenguin = window.getComputedStyle(penguin);
 let leftValue = cssofPenguin.left;
-let leftValueWithoutPx = parseInt(leftValue);
+// let leftValueWithoutPx = parseInt(leftValue);
 
-
-window.addEventListener("keydown", move)
-
-function move(e){
-    if(e.key == "ArrowRight" && penguin.offsetLeft > 0){
+window.addEventListener("keydown", function(e){
+    if(e.key == "ArrowRight" && penguin.offsetLeft >= 0 && penguin.offsetLeft <= 360){
         penguin.style.left = (penguin.offsetLeft+5)+'px';
-        penguin.style.backgroundPosition = '35px'; 
-    }else if(e.key == "ArrowLeft" && penguin.offsetLeft < 400){
+    }else if(e.key == "ArrowLeft" && penguin.offsetLeft >= 0 && penguin.offsetLeft <= 360){
         penguin.style.left = (penguin.offsetLeft-5)+'px';
-        penguin.style.backgroundPosition = '35px'; 
+    }else if (e.key == "ArrowUp"&& penguin.offsetTop >= 0 && penguin.offsetTop <= 460){
+        penguin.style.top = (penguin.offsetTop-5)+'px';
+    }else if(e.key == "ArrowDown"&& penguin.offsetTop >= 0 && penguin.offsetTop <= 460){
+        penguin.style.top = (penguin.offsetTop+5)+'px';
+    }else if(e.key == "Enter"){
+        const img = document.createElement("img");
+        img.classList.add("boom");
+        img.setAttribute("src","../images/boom.png");
+        img.style.left = penguin.offsetLeft+'px';
+        img.style.top = penguin.offsetTop+'px';
+        document.getElementById("area").append(img);
     }
 
-}
+
+    if(penguin.offsetLeft == 0){
+        console.log(penguin.offsetLeft);
+        penguin.style.left = (penguin.offsetLeft+2)+'px';
+        console.log(penguin.offsetLeft);
+    }else if(penguin.offsetLeft == 360){
+        console.log(penguin.offsetLeft);
+        penguin.style.left = (penguin.offsetLeft-2)+'px';
+        console.log(penguin.offsetLeft);
+    }else if(penguin.offsetTop == 0){
+        penguin.style.top = (penguin.offsetTop+2)+'px';
+    }else if(penguin.offsetTop == 460){
+        penguin.style.top = (penguin.offsetTop-2)+'px';
+    }
+    
+});
+
+// 조건에 닿으면 
+
+
+
+
+
 
 
 
