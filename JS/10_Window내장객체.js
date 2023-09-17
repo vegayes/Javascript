@@ -10,7 +10,7 @@ document.getElementById("btn1").addEventListener("click", function(){
 // =====================================
 
 let interval; // setInterval을 저장하기 위한 전역 변수
-let flag ; 
+let flag = 0 ; 
 
 // 현재 시간 문자열로 반환 함수 
 function  currentTime(){
@@ -18,7 +18,7 @@ function  currentTime(){
     const now = new Date();
     // Date() 날짜관련 JS 내장 객체
 
-    let hour =now.getHours(); // 시
+    let hour = now.getHours(); // 시
     let min = now.getMinutes(); // 분
     let sec = now.getSeconds(); // 초
 
@@ -34,11 +34,10 @@ function clockFn(){
 
     clock.innerText = currentTime();
 
+  
     interval = setInterval(function(){
         clock.innerText = currentTime();
     }, 1000);
-
-    flag = 1;
     
 }
 
@@ -46,17 +45,24 @@ clockFn(); //함수호출
 
 // clearInterval() 
 document.getElementById("stop").addEventListener("click", function(){
-    clearInterval(interval);
-    flag = 0;
+
+    if(flag == 0){
+        clearInterval(interval);
+        flag = 1;
+    }else if (flag== 1){
+        flag = 0;
+        clockFn();
+    }
+    
 })
 
-document.getElementById("stop").addEventListener("click", function(){
-    if(flag == 0) {
-        interval = setInterval(function(){
-            clock.innerText = currentTime();
-        }, 1000);
-    };
-})
+// document.getElementById("stop").addEventListener("click", function(){
+//     if(flag == 0) {
+//         interval = setInterval(function(){
+//             clock.innerText = currentTime();
+//         }, 1000);
+//     };
+// })
 
 
 

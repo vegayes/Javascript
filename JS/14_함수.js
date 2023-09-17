@@ -61,7 +61,6 @@ document.getElementById("btn2-4").addEventListener("click", (e) => {
     // Window {window: Window, self: Window, document: document, name: '', location: Location, …}
 
     e.target.style.color = "white";
-    
 });
 
 

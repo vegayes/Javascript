@@ -17,7 +17,7 @@ function test1(btn){
 
 //  해결 방법
 //  HTML 요소가 먼저 랜더링 된 후 JS 코드 수행할 수 있도록 
-//  body 태그 맨 앞래 script 태그를 넣는다. 
+//  body 태그 맨 앞에 script 태그를 넣는다. 
 
 document.getElementById("test2-1").onclick = function() {
                                             //  익명 함수 연결 ( 이벤트 핸들러에 많이 사용함)

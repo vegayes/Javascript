@@ -10,7 +10,7 @@ document.getElementById("btn1").addEventListener("click", function(){
     // 노드 탐색
     //  1) 부모 노드 탐색 : parentNode
     const li1 = document.getElementById("li1");
-    console.log(li1.parentNode); // ul 태그 
+    console.log("부모 노드 탐색 " + li1.parentNode); // ul 태그 
 
     //  + 부모 노드 마지막에 새로운 노드 추가 (append : (마지막에) 덧붙이다)
     li1.parentNode.append("abcd");
@@ -19,20 +19,20 @@ document.getElementById("btn1").addEventListener("click", function(){
 
 
     //  2) 첫 번째 자식 노드 탐색 : firstChild
-    console.log( document.getElementById("test").firstChild) // ==> \n 첫 번째 자식 노드 
+    console.log( "첫 번째 자식 노드 탐색 "+ document.getElementById("test").firstChild) // ==> \n 첫 번째 자식 노드 
 
     //  3) 마지막 자식 노드 탐색 : lastChild
-    console.log( document.getElementById("test").lastChild) // ==> \n 마지막 번째 자식 노드 ( 추가된 abcd가 출력됨) 
+    console.log( "마지막 자식 노드 탐색 " + document.getElementById("test").lastChild) // ==> \n 마지막 번째 자식 노드 ( 추가된 abcd가 출력됨) 
     
     //  4) 중간에 존재하는 자식 노드 탐색 : 부모요소.childNodes[인덱스]
-    console.log(nodeList[11]); // 7번째 줄에서 자식 노드로 설정함.
+    console.log("중간에 존재하는 자식 노드 탐색 " + NodeList[11]); // 7번째 줄에서 자식 노드로 설정함.
 
 
     //  5) 이전 형제 노드 탐색 : previousSibling
     //     다음 형제 노드 탐색 : nextSibling
 
-    console.log(nodeList[8].previousSibling);
-    console.log(nodeList[8].nextSibling);
+    console.log("이전 형제 노드 탐색 " + nodeList[8].previousSibling);
+    console.log("다음 형제 노드 탐색 " + nodeList[8].nextSibling);
 
     // 연달아서 사용 가능 
     console.log(nodeList[8].previousSibling.previousSibling.previousSibling);
